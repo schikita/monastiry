@@ -1448,6 +1448,12 @@ h2 {
   z-index: 1000;
 }
 
+.scroll-to-top::before {
+  content: "⇫"; /* символ креста */
+  font-size: 24px;
+  color: #d4c27a; /* золотистый */
+}
+
 .scroll-to-top.visible {
   opacity: 1;
   visibility: visible;
