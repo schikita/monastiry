@@ -79,7 +79,6 @@
     font-size: 1.1rem;
   }
 
-  /* Скрываем обычное меню, показываем гамбургер */
   .menu {
     position: fixed;
     top: var(--nav-h);
@@ -107,7 +106,7 @@
 
   /* Hero */
   .hero {
- min-height: 100vh;
+    min-height: 100vh;
     padding-top: calc(var(--nav-h) + 1rem);
     align-items: center;
     justify-content: center;
@@ -139,7 +138,7 @@
     margin-bottom: 2rem;
   }
 
-  /* Тренд секция */
+  /* Тренд */
   .trend-inner {
     padding: clamp(16px, 3vw, 24px);
   }
@@ -152,7 +151,7 @@
     font-size: clamp(1rem, 3vw, 1.1rem);
   }
 
-  /* How-to секция */
+  /* How-to */
   .how-text, .how-text-1 {
     padding: clamp(12px, 2.5vw, 20px);
   }
@@ -204,23 +203,64 @@
   }
 
   /* Игуменья */
+  .abbess-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .abbess-hero__content {
     position: relative;
     right: auto;
     top: auto;
-    margin: 1rem;
+    margin: 1rem auto;
+    max-width: 92vw;
+    padding: 1rem 1.2rem;
+    background: rgba(0,0,0,0.55);
+    border-radius: 8px;
+  }
+
+  .abbess-hero__content h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .abbess-hero__content p {
+    font-size: clamp(0.95rem, 4vw, 1.05rem);
+    line-height: 1.6;
+  }
+
+  .quote-bar {
+    margin: 1rem auto;
+    padding: 1rem 1.2rem;
+    max-width: 92vw;
+    background: rgba(0,0,0,0.55);
+    border-left: 4px solid #d4c27a;
+    border-radius: 8px;
   }
 
   .quote-bar__inner {
-    padding: clamp(12px, 2.5vw, 20px) clamp(12px, 3vw, 24px);
+    padding: 0;
   }
 
   .q {
-    font-size: clamp(0.95rem, 3vw, 1.1rem);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f1f1f1;
   }
 
-  .q::before, .q::after {
-    font-size: clamp(40px, 10vw, 70px);
+  .q p {
+    margin-bottom: 0.8rem;
+  }
+
+  .q-caption {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: right;
+    color: #d4c27a;
   }
 
   /* Трапеза */
@@ -271,7 +311,7 @@
     font-size: 1.5rem;
   }
 
-  /* Аудио карточка */
+  /* Аудио */
   .audio-card {
     padding: 0.7rem;
   }
@@ -341,7 +381,7 @@
   }
 }
 
-/* Оптимизация для touch-устройств */
+/* Touch-устройства */
 @media (hover: none) and (pointer: coarse) {
   .menu a::after {
     display: none;
@@ -378,13 +418,13 @@
   transition: 0.3s;
 }
 
-/* показать только на мобилках */
+/* показать гамбургер только на мобилках */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
 
-   html {
+  html {
     scroll-snap-type: none;
   }
   section {
@@ -394,3 +434,44 @@
 }
 
 
+@media (max-width: 750px) {
+  .abbess-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .abbess-hero__content {
+    position: static;          /* убрать absolute */
+    max-width: 92vw;
+    margin-bottom: 1rem;
+  }
+
+  .quote-bar {
+    position: static;          /* убрать absolute */
+    width: 100%;
+    margin-top: 1rem;
+    background: rgba(0,0,0,0.55);
+    border-left: 4px solid #d4c27a;
+    border-radius: 8px;
+  }
+
+  .quote-bar__inner {
+    padding: 1rem 1.2rem;
+  }
+
+  .q {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f1f1f1;
+  }
+
+  .q-caption {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    text-align: right;
+    color: #d4c27a;
+  }
+}
