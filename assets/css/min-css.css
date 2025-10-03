@@ -1,0 +1,51 @@
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-snap-type: none;
+  }
+
+  .nav-inner {
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+  .logo img {
+    height: 38px;
+  }
+  .menu {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .menu a {
+    font-size: 0.95rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .gallery-grid,
+  .video-grid,
+  .audio-grid {
+    grid-template-columns: 1fr;
+  }
+}
