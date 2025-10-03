@@ -4,67 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Храмы Беларуси - Духовное наследие</title>
+    <meta name="description" content="Живой репортаж о монастыринге - новом тренде среди молодежи Беларуси">
+    <title>Храмы Беларуси - Духовное наследие | Монастыринг</title>
+    
+    <!-- Основные стили -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/min-css.css">
+    <!-- Адаптивные стили для планшетов и мобильных -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <!-- Preload критичных ресурсов -->
+    <link rel="preload" href="./assets/fonts/Tsarevich old.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="./assets/img/hero.jpg" as="image">
 </head>
 
 <body>
 
+    <!-- Лоадер -->
     <div class="loader" id="loader">
         <img src="./assets/img/splash.png" alt="Загрузка..." class="loader-image">
     </div>
 
-
-
+    <!-- Навигация -->
     <nav id="navbar">
         <div class="nav-inner">
             <a href="https://www.sb.by/" class="logo" target="_blank" rel="noopener noreferrer">
-                <img src="./assets/img/logo.png" alt="Лого" loading="lazy" />
+                <img src="./assets/img/logo.png" alt="Лого SB.BY" loading="lazy" width="44" height="44" />
                 <span class="logo-text">SB.BY</span>
             </a>
+            
+            <!-- Гамбургер меню (показывается на мобильных) -->
+            <button class="hamburger" aria-label="Меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <ul class="menu">
                 <li><a href="#how">Как туда попасть?</a></li>
                 <li><a href="#howit">Что там делать?</a></li>
-                <li><a href="#videos">Какие выводы?</a></li>
+                <li><a href="#conclusion">Какие выводы?</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="leav">
-            ЖИВОЙ РЕПОРТАЖ
-        </div>
-
+        <div class="leav">ЖИВОЙ РЕПОРТАЖ</div>
         <div class="hero-content">
             <h1 class="floating">Монастыринг</h1>
             <p>Проверим на себе?</p>
         </div>
     </section>
 
+    <!-- Секция "Монастыринг" -->
     <section class="trend" id="trend">
-        <!-- Фон -->
         <div class="trend-bg" aria-hidden="true"></div>
         <div class="trend-vignette" aria-hidden="true"></div>
-
-        <!-- Контент -->
         <div class="trend-inner">
             <h2>Монастыринг</h2>
             <p>
                 Это новый тренд, в рамках которого люди, в основном молодёжь, временно приезжают в монастырь, чтобы жить
-                там,
-                выполнять послушания (работать в саду, на кухне, помогать с уборкой) и погрузиться в духовную жизнь.
+                там, выполнять послушания (работать в саду, на кухне, помогать с уборкой) и погрузиться в духовную жизнь.
                 <a href="https://www.sb.by/author/1350621-viktoriya-derzhanovich-/" class="author-link">Виктория
-                    Держанович</a> не упустила шанс проверить новое течение на
-                себе,
-                собрала вещи и отправилась прокачиваться духовно в Ксениевский женский монастырь, что находится в
-                деревне Барань
-                Борисовского района.
+                    Держанович</a> не упустила шанс проверить новое течение на себе, собрала вещи и отправилась прокачиваться духовно в Ксениевский женский монастырь, что находится в деревне Барань Борисовского района.
             </p>
         </div>
     </section>
 
-
+    <!-- Секция "Как туда попасть?" -->
     <section class="how-to" id="how">
         <div class="how-bg" aria-hidden="true"></div>
         <div class="container how-inner">
@@ -94,74 +102,59 @@
                     <div class="quote-callout">
                         <p class="qline">
                             <span class="text-pr">«Только чтобы они не отрывались по-своему тут»,</span> — заметил
-                            Президент, намекая на значение
-                            этого слова на молодёжном сленге.
+                            Президент, намекая на значение этого слова на молодёжном сленге.
                         </p>
-
                         <p class="qline">
                             <span class="text-pr">«В этом плане всё строго»,</span> — заверили Главу государства в
-                            Свято-Успенском Жировичском
-                            митрополичьем монастыре.
+                            Свято-Успенском Жировичском митрополичьем монастыре.
                         </p>
                     </div>
-
                 </div>
 
-                <!-- Фото президента (замените src на свои) -->
                 <div class="how-photos">
                     <figure class="how-photo">
-                        <img src="./assets/img/president-1.jpg" alt="Визит Президента в Жировичи" loading="lazy">
+                        <img src="./assets/img/president-1.jpg" alt="Визит Президента в Жировичи" loading="lazy" width="400" height="300">
                     </figure>
                     <figure class="how-photo">
-                        <img src="./assets/img/president-2.jpg" alt="Общение в монастыре" loading="lazy">
+                        <img src="./assets/img/president-2.jpg" alt="Общение в монастыре" loading="lazy" width="400" height="300">
                     </figure>
                     <figure class="how-photo wide">
-                        <img src="./assets/img/president-3.jpg" alt="Свято-Успенский Жировичский монастырь"
-                            loading="lazy">
+                        <img src="./assets/img/president-3.jpg" alt="Свято-Успенский Жировичский монастырь" loading="lazy" width="800" height="400">
                     </figure>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-
+    <!-- Секция "Ксениевский женский монастырь" -->
     <section class="place" id="place">
         <div class="container">
             <h2>Ксениевский женский монастырь</h2>
             <p class="lead">
                 Ксениевский женский монастырь и храм в плане монастыринга — идеальное уединённое место. Кругом —
-                сосновый бор.
-                От воздуха, насыщенного кислородом, после мегаполиса почувствовала лёгкое головокружение. Пейзажи так и
-                располагают
-                к длительным прогулкам, созерцанию и размышлениям.
+                сосновый бор. От воздуха, насыщенного кислородом, после мегаполиса почувствовала лёгкое головокружение. Пейзажи так и располагают к длительным прогулкам, созерцанию и размышлениям.
             </p>
 
-            <!-- фоторяд -->
             <div class="photo-grid" id="photo-grid">
-                <!-- можно оставить статично (пример ниже) или рендерить через JS массивом -->
-                <!-- Пример статичных карточек: -->
                 <figure class="ph">
-                    <img src="./assets/img/galery/01.jpg" alt="Тропинка в сосновом бору" loading="lazy">
+                    <img src="./assets/img/galery/01.jpg" alt="Тропинка в сосновом бору" loading="lazy" width="400" height="300">
                     <figcaption>Тропинка в сосновом бору</figcaption>
                 </figure>
                 <figure class="ph">
-                    <img src="./assets/img/galery/03.jpg" alt="Вид на монастырь" loading="lazy">
+                    <img src="./assets/img/galery/03.jpg" alt="Вид на монастырь" loading="lazy" width="400" height="300">
                     <figcaption>Вид на монастырь</figcaption>
                 </figure>
                 <figure class="ph tall">
-                    <img src="./assets/img/galery/04.jpg" alt="Колокольня на закате" loading="lazy">
+                    <img src="./assets/img/galery/04.jpg" alt="Колокольня на закате" loading="lazy" width="400" height="600">
                     <figcaption>Колокольня на закате</figcaption>
                 </figure>
                 <figure class="ph wide">
-                    <img src="./assets/img/galery/05.jpg" alt="Сосновый бор вокруг обители" loading="lazy">
+                    <img src="./assets/img/galery/05.jpg" alt="Сосновый бор вокруг обители" loading="lazy" width="800" height="400">
                     <figcaption>Сосновый бор вокруг обители</figcaption>
                 </figure>
             </div>
         </div>
 
-        <!-- встроенный лёгкий лайтбокс -->
         <dialog class="lightbox" id="lightbox">
             <button class="lb-close" aria-label="Закрыть">×</button>
             <img id="lightbox-img" alt="">
@@ -169,12 +162,11 @@
         </dialog>
     </section>
 
-
+    <!-- Секция "Игуменья Евпраксия" -->
     <section class="abbess-hero" id="abbess">
         <div class="abbess-hero__bg" aria-hidden="true"></div>
         <div class="abbess-hero__vignette" aria-hidden="true"></div>
 
-        <!-- ПРАВАЯ КОЛОНКА: заголовок + текст -->
         <div class="abbess-hero__content">
             <h2 class="text-pr">Знакомство с игуменьей Евпраксией</h2>
             <p>
@@ -182,12 +174,10 @@
                 Она первым делом интересуется, воцерковлена ли я. Иными словами, участвую ли в таинствах церкви.
                 Честно признаюсь, что нет, ибо не вижу смысла изображать из себя кого-то, кем не являюсь на самом деле.
                 В глазах матушки нет и намёка на осуждение. Она поясняет, что её интерес далеко не праздный –
-                невоцерковленному
-                человеку, желающему пожить в обители, настоятельница вправе отказать.
+                невоцерковленному человеку, желающему пожить в обители, настоятельница вправе отказать.
             </p>
         </div>
 
-        <!-- НИЖЕ ЦИТАТА (шириной на всю секцию) -->
         <figure class="quote-bar" role="note" aria-label="Прямая речь">
             <div class="quote-bar__inner">
                 <blockquote class="q">
@@ -206,7 +196,12 @@
     </section>
 
     <section class="stay" id="stay">
-        <div class="stay-bg" aria-hidden="true"></div>
+        <div class="stay-bg" aria-hidden="true">
+            <video autoplay muted loop playsinline>
+                <source src="./assets/video/viseo-2.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видеофон.
+            </video>
+        </div>
         <div class="stay-vignette" aria-hidden="true"></div>
 
         <div class="stay-inner">
@@ -355,8 +350,8 @@
                 <div class="quote-callout">
                     <p class="qline">
                         <span class="text-pr">
-                    И да, за день я ни разу не вспомнила про телефон и соцсети.
-                                      </span>
+                            И да, за день я ни разу не вспомнила про телефон и соцсети.
+                        </span>
                     </p>
                 </div>
             </div>
@@ -364,118 +359,210 @@
     </section>
 
 
+    <section class="morning" id="morning">
+        <div class="morning-bg" aria-hidden="true">
+            <video autoplay muted loop playsinline>
+                <source src="./assets/video/video-3.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видеофон.
+            </video>
+        </div>
+        <div class="morning-vignette" aria-hidden="true"></div>
 
-
-
-    <section class="videos" id="videos">
-        <div class="container">
-            <h2>Видео экскурсии по храмам</h2>
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <video controls poster="https://images.unsplash.com/photo-1605640840605-14ac1855827b?w=600">
-                            <source src="https://cdn.coverr.co/videos/coverr-cathedral-interior-3986/1080p.mp4"
-                                type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h3>Внутри древнего собора</h3>
-                        <p>Виртуальная экскурсия по историческим храмам Беларуси с детальным осмотром архитектуры и
-                            убранства.</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <video controls poster="https://images.unsplash.com/photo-1583225214464-9a83f5f1ec1e?w=600">
-                            <source src="https://cdn.coverr.co/videos/coverr-church-bells-ringing-8114/1080p.mp4"
-                                type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h3>Колокольный звон</h3>
-                        <p>Традиции колокольного звона в белорусских храмах. Искусство, передающееся из поколения в
-                            поколение.</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <video controls poster="https://images.unsplash.com/photo-1604868585918-4bce225edbb5?w=600">
-                            <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-church-2573/1080p.mp4"
-                                type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h3>Храмы с высоты птичьего полёта</h3>
-                        <p>Аэросъёмка величественных храмов и монастырских комплексов в живописных уголках Беларуси.</p>
-                    </div>
+        <div class="container morning-inner">
+            <div class="morning-content">
+                <h2 class="text-pr">Следующее утро</h2>
+                <p>
+                    Мое следующее утро началось в 08:00. Мне предстояло собраться и идти на воскресное богослужение.
+                    Людей в храме было значительно больше, чем накануне.
+                    Молитвы и песнопения воспринимаются гораздо лучше.
+                    Получается, в духовной жизни, как и в спорте, чем больше тренируешься, тем крепче становишься.
+                    Но выстоять на ногах двухчасовую службу по-прежнему непросто: ноги затекают, спина начинает болеть.
+                </p>
+                <div class="quote-callout">
+                    <p class="qline">
+                        <span class="text-pr">
+                            Подхожу к иконе святой блаженной Ксении Петербургской, имя которой носит обитель.
+                            Говорят, если попросить у нее заступничества в делах сердечных, она обязательно поможет.
+                            Что ж, может, это и мой шанс встретить своего суженого?
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="conclusion" id="conclusion">
+        <div class="conclusion-bg" aria-hidden="true"></div>
+        <div class="conclusion-vignette" aria-hidden="true"></div>
 
+        <div class="container conclusion-inner">
+            <div class="conclusion-grid">
 
-    <section class="history" id="history">
-        <div class="container">
-            <h2>История храмового зодчества</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">X-XI века</div>
-                        <h3>Зарождение</h3>
-                        <p>Первые каменные храмы появились на территории Беларуси после крещения. Софийский собор в
-                            Полоцке стал одним из первых монументальных строений.</p>
-                    </div>
+                <!-- Левая колонка -->
+                <div class="conclusion-col">
+                    <h2 class="text-pr" style="font-size:70px;">Какие выводы?</h2>
+                    <p>
+                        Наступает время покинуть обитель. Я понимаю, что все мои страхи, которые испытывала поначалу,
+                        рассеялись. И даже как будто не хочется никуда уезжать. Хотелось даже задержаться здесь хотя бы
+                        еще на несколько дней. Но в Минске меня ждут привычные дела и обязательства –
+                        в том числе положить этот репортаж на бумагу.
+                    </p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">XII-XIII века</div>
-                        <h3>Золотой век</h3>
-                        <p>Расцвет полоцкой архитектурной школы. Создание уникальных памятников, таких как Коложская
-                            церковь в Гродно.</p>
-                    </div>
+
+                <!-- Правая колонка -->
+                <div class="conclusion-col">
+                    <h2>К каким выводам я пришла, опробовав монастыринг на себе?</h2>
+                    <p>
+                        Это действительно классный способ перезагрузки. В обители ты можешь отвлечься от инфошума
+                        и уединиться, помолиться и поразмышлять о своей жизни. Но такой вариант отдыха подойдет не
+                        каждому. Собственно, это даже и не отдых в полном смысле слова, скорее, духовный и физический
+                        труд.
+                    </p>
+                    <p>
+                        Если хотите просто заземлиться и побыть в тишине, арендуйте домик за городом.
+                        А если ваши устремления гораздо глубже, например, прислушаться к себе и получить ответы
+                        на давно мучившие вопросы, тогда стоит рассмотреть такой вариант.
+                    </p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">XV-XVI века</div>
-                        <h3>Готика и Ренессанс</h3>
-                        <p>Влияние европейских стилей. Строительство костёлов и монастырей с элементами готики и
-                            ренессанса.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">XVII-XVIII века</div>
-                        <h3>Барокко</h3>
-                        <p>Эпоха пышного барокко. Создание величественных храмовых комплексов с богатым декором и
-                            росписями.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">XXI век</div>
-                        <h3>Возрождение</h3>
-                        <p>Реставрация исторических храмов и строительство новых. Сохранение духовного наследия для
-                            будущих поколений.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Храмы Беларуси - Духовное и культурное наследие</p>
-            <p>Сохраним историю вместе</p>
-            <div class="social-links">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="YouTube">📹</a>
-                <a href="#" title="Email">✉️</a>
+
+    <section class="projects-section" id="projects">
+        <div class="section-header">
+            <h2 class="section-title text-pr">Живой репортаж — материалы</h2>
+        </div>
+
+        <div class="projects-carousel-container">
+            <div class="projects-carousel" id="projectsCarousel">
+                <div class="carousel-track">
+
+                    <a href="https://www.sb.by/sp/bear-hunting/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/hunting.png" loading="lazy" alt="Охота на медведя">
+                        <div class="project-info">
+                            <h3>Охота на медведя</h3>
+                            <p>Как корреспондент СБ отправился на медведя</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/voencore2025/index.html" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/voencore.jpg" loading="lazy" alt="Военкор-2025">
+                        <div class="project-info">
+                            <h3>Военкор-2025</h3>
+                            <p>Глазами журналиста на передовой</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/school/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/scool.jpg" loading="lazy" alt="Идем в школу">
+                        <div class="project-info">
+                            <h3>Идем в школу</h3>
+                            <p>Чем удивляют новые школы в Беларуси?</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/trafficrules/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/PDD.jpg" loading="lazy" alt="НОВШЕСТВА ПДД">
+                        <div class="project-info">
+                            <h3>НОВШЕСТВА ПДД</h3>
+                            <p>Что нового в правилах дорожного движения?</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/parad/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/hero-1.jpg" loading="lazy" alt="Военный парад">
+                        <div class="project-info">
+                            <h3>Военный парад в Китае</h3>
+                            <p>80-летие завершения Второй мировой войны</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/adaptacia/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/006.jpg" loading="lazy" alt="Адаптация">
+                        <div class="project-info">
+                            <h3>Адаптация в общежитиях</h3>
+                            <p>Как адаптируются первокурсники</p>
+                        </div>
+                    </a>
+                    <a href="https://www.sb.by/sp/miting/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/text-2.JPG" loading="lazy" alt="БЕРЕЗА-КАРТУЗСКАЯ проект">
+                        <div class="project-info">
+                            <h3>БЕРЕЗА-КАРТУЗСКАЯ</h3>
+                            <p>ВО ИМЯ ИСТОРИИ</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/citizenship/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/passport.jpg" loading="lazy" alt="Белорусы+ проект">
+                        <div class="project-info">
+                            <h3>Белорусы+</h3>
+                            <p>Новые граждане республики</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/yarmarki/" class="carousel-slide project-card">
+                        <img src="./assets/img/projects/ov-row.jpg" loading="lazy" alt="Ярмарки Беларуси">
+                        <div class="project-info">
+                            <h3>Встречаем осень вкусно</h3>
+                            <p>Cельхозярмарки в Беларуси!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-prev" id="projectsPrevBtn" aria-label="Предыдущий">‹</button>
+            <button class="carousel-btn carousel-next" id="projectsNextBtn" aria-label="Следующий">›</button>
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p>Автор: Виктория Держанович<br>
+                        Фото: Кристины ФАНЧЕНКО</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Живой репортаж | МОНАСТЫРИНГ</p>
             </div>
         </div>
-    </footer>
-    <script src="./assets/js/main.js"></script>
+    </section>
+
+    <!-- Подключение скриптов -->
+    <script src="./assets/js/main.js" defer></script>
+    
+    <!-- Аналитика (загружается асинхронно) -->
+    <script>
+        function loadYandexMetrika() {
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) return;
+                }
+                (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+            })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            ym(16707172, "init", { webvisor: true, clickmap: true, accurateTrackBounce: true, trackLinks: true });
+        }
+        
+        function loadGTM() {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-KRVNNK");
+        }
+
+        window.addEventListener("load", () => {
+            setTimeout(loadYandexMetrika, 3000);
+            setTimeout(loadGTM, 4000);
+        });
+    </script>
 </body>
 
 </html>
