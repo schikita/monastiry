@@ -325,3 +325,28 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   );
 })();
 
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll("video[muted][loop][playsinline]");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+        if (video.paused) {
+          video.play().catch(err => {
+            console.log("Автовоспроизведение не удалось:", err);
+          });
+        }
+      } else {
+        if (!video.paused) {
+          video.pause();
+        }
+      }
+    });
+  }, { threshold: 0.4 });
+
+  videos.forEach(video => {
+    observer.observe(video);
+  });
+});
