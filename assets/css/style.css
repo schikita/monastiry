@@ -36,7 +36,7 @@ html {
 
 body {
   font-family: lid;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(180deg, rgba(119, 119, 119, 0.8) 0%, rgba(0,0,0,.95) 100%);
   color: #333;
   overflow-x: hidden;
   padding-top: var(--nav-h);
@@ -319,10 +319,11 @@ section {
 
 h2 {
   font-family: tras;
+  letter-spacing: 0.08em;
   font-size: clamp(2rem, 4vw, 3.5rem);
   text-align: center;
   margin-bottom: 3rem;
-  color: white;
+  color: rgb(255, 251, 0);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1s ease;
 }
@@ -389,7 +390,7 @@ h2 {
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1.15;
   margin-bottom: 0.8rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
 }
 
@@ -425,21 +426,14 @@ h2 {
   align-items: center;
   color: #fff;
   padding: clamp(20px, 5vw, 60px) 0;
+
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('../img/hero-6.jpg') center/cover no-repeat;
 }
 
+
 /* фоновая подложка */
-.how-bg {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.65) 0%,
-      rgba(0, 0, 0, 0.35) 60%,
-      rgba(0, 0, 0, 0.65) 100%
-    ),
-    url("../img/how-bg.jpg") center/cover no-repeat; /* замените на свой фон */
-  z-index: 0;
-}
 
 /* контент */
 .how-inner {
@@ -630,10 +624,15 @@ h2 {
 
 /* Gallery Section */
 .place {
+  position: relative;
   padding: clamp(24px, 5vw, 64px) 0;
   color: #fff;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   scroll-snap-align: center;
+
+  /* фон во всю секцию + затемнение */
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('../img/hero-5.jpg') center/cover no-repeat;
 }
 .place .container {
   max-width: 1200px;
@@ -1268,12 +1267,14 @@ h2 {
 }
 
 .carousel-slide {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* фиксируем ширину через .project-card */
   padding: 0 0.5rem;
 }
 
 .project-card {
   display: block;
+  width: 280px;              /* фиксируем ширину карточки */
+  max-width: 100%;
   background: rgba(53, 39, 2, 0.6);
   border-radius: 14px;
   overflow: hidden;
@@ -1430,12 +1431,10 @@ h2 {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
 }
 
-
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  background: url("../img/cross-icon.png") center/60% no-repeat, #3b2e14;
+  right: 20px;  
   border: 2px solid #d4c27a;
   border-radius: 50%;
   width: 50px;
@@ -1446,12 +1445,19 @@ h2 {
   transition: 0.3s;
   box-shadow: 0 4px 12px rgba(0,0,0,.5);
   z-index: 1000;
+
+  background: #2c1e0f; /* тёмный фон */
 }
 
 .scroll-to-top::before {
-  content: "⇫"; /* символ креста */
-  font-size: 24px;
+  content: "✝"; /* крестик или ⇧ */
+  font-size: 22px;
   color: #d4c27a; /* золотистый */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .scroll-to-top.visible {

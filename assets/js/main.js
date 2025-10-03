@@ -325,4 +325,3 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   );
 })();
 
-console.log("✅ Все скрипты загружены и оптимизированы");
